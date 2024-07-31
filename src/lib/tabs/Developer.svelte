@@ -40,7 +40,8 @@
 	src={hyperpaint}
 	alt="Hyper Paint"
 	url="https://editor.p5js.org/zokalyx/full/ESz3r4_Tu"
+	width="20em"
 />
-<LinkImage src={qsim} alt="Qsim" url="https://github.com/Zokalyx/qsim" />
-<LinkImage src={pokerush} alt="PokeRush" url="https://github.com/Zokalyx/PokeRush" />
-<Image src={juntaditas} alt="Juntaditas" />
+<LinkImage src={qsim} alt="Qsim" url="https://github.com/Zokalyx/qsim" width="38em" />
+<LinkImage src={pokerush} alt="PokeRush" url="https://github.com/Zokalyx/PokeRush" width="34em" />
+<Image src={juntaditas} alt="Juntaditas" width="8em" />

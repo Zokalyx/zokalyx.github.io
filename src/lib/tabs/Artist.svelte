@@ -10,9 +10,9 @@
 	const imageHeight = '20em';
 </script>
 
-<Image src={messi} alt="Messi artwork" height={imageHeight} />
-<Image src={lappland} alt="Lappland artwork" height={imageHeight} />
-<Image src={metaball} alt="Metaball artwork" height={imageHeight} />
+<Image src={messi} alt="Messi artwork" height={imageHeight} width={imageHeight} />
+<Image src={lappland} alt="Lappland artwork" height={imageHeight} width={imageHeight} />
+<Image src={metaball} alt="Metaball artwork" height={imageHeight} width="11em" />
 
 <div style="width: 100%;"></div>
 <Paragraph>

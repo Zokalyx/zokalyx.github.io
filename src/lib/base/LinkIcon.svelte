@@ -11,6 +11,7 @@
 	export let color: string = 'black';
 
 	let showlink = false;
+	let imgLoaded = false;
 </script>
 
 <div transition:fly={{ y: -40, duration: 400 }}>
@@ -21,7 +22,13 @@
 			on:mouseleave={() => (showlink = false)}
 			style="--widthValue: {width};"
 		>
-			<img {src} {alt} style="--heightValue: {height};" />
+			<img
+				{src}
+				{alt}
+				style="--heightValue: {height};"
+				on:load={() => (imgLoaded = true)}
+				class:visible={imgLoaded}
+			/>
 			{#if showlink}
 				<div transition:slide={{ axis: 'x', duration: 300 }}>
 					<p transition:fly={{ x: -200 }} style="--colorValue: {color};">
@@ -38,7 +45,13 @@
 			on:mouseleave={() => (showlink = false)}
 			style="--widthValue: {width};"
 		>
-			<img {src} {alt} style="--heightValue: {height};" />
+			<img
+				{src}
+				{alt}
+				style="--heightValue: {height};"
+				on:load={() => (imgLoaded = true)}
+				class:visible={imgLoaded}
+			/>
 			{#if showlink}
 				<div transition:slide={{ axis: 'x', duration: 300 }}>
 					<p transition:fly={{ x: -200 }} style="--colorValue: {color};">
@@ -70,10 +83,17 @@
 	}
 
 	img {
-		transition: filter 300ms;
+		transition:
+			filter 300ms,
+			opacity 0.6s;
 		height: var(--heightValue);
 		-wekbit-filter: drop-shadow(0 0.25em 0.25em rgba(0, 0, 0, 0.4));
 		filter: drop-shadow(0 0.25em 0.25em rgba(0, 0, 0, 0.4));
+		opacity: 0;
+	}
+
+	.visible {
+		opacity: 1;
 	}
 
 	p {

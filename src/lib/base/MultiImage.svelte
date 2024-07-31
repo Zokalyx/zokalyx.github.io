@@ -2,6 +2,7 @@
 	import { fly } from 'svelte/transition';
 
 	export let height: string = '14em';
+	export let width: string = 'auto';
 	export let sideMargin: string = '1.5em';
 
 	export let images: { src: string; alt: string }[];
@@ -18,6 +19,7 @@
         --heightValue: {height};
         --hoverAngle: {hoverAngle};
         --sideMargin: {sideMargin};
+		--widthValue: {width};
     "
 >
 	{#each images as image, i}
@@ -32,11 +34,14 @@
 <style>
 	div {
 		display: grid;
+		place-items: center;
 		margin-left: var(--sideMargin);
 		margin-right: var(--sideMargin);
 
 		-webkit-transform: translateY(-0.75em);
-		transform: translateY(-0.75em);
+		transform: translateY(-0.25em);
+
+		width: var(--widthValue);
 	}
 
 	div > * {

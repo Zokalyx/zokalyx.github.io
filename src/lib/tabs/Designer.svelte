@@ -18,13 +18,14 @@
 	sure it looks as good as possible, while keeping it functional and easy to understand. A big part
 	of my experience involves UI and logo design.
 </Paragraph>
-<LinkImage src={unity} alt="Unity calculator" url="https://zokalyx.github.io/unity/" />
+<LinkImage src={unity} alt="Unity calculator" url="https://zokalyx.github.io/unity/" width="32em" />
 <div style="width: 100%"></div>
 <MultiImage
 	images={[
 		{ src: hiragana, alt: 'Hiragana' },
 		{ src: katakana, alt: 'Katakana' }
 	]}
+	width="12em"
 />
-<Image src={schedule} alt="Metaball team Argentium schedule" height={imageHeight} />
-<Image src={logos} alt="University subject logos" height={imageHeight} />
+<Image src={schedule} alt="Metaball team Argentium schedule" height={imageHeight} width="30em" />
+<Image src={logos} alt="University subject logos" height={imageHeight} width="20em" />

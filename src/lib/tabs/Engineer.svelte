@@ -14,7 +14,7 @@
 	I'm an Electronics Engineering student at the University of Buenos Aires and I'm expecting to
 	graduate by the end of 2025.
 </Paragraph>
-<LinkImage url="https://www.fi.uba.ar" src={fiuba} alt="Facultad de Ingeniería" />
+<LinkImage url="https://www.fi.uba.ar" src={fiuba} alt="Facultad de Ingeniería" width="36em" />
 <div style="width: 100%;"></div>
 <Paragraph>
 	I've learned many cool things during my studies! I have a solid understanding of signal analysis,

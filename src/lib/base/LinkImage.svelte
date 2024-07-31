@@ -6,10 +6,17 @@
 	export let url: string;
 
 	export let height: string = '18em';
+	export let width: string = 'auto';
+
+	let imgLoaded = false;
 </script>
 
-<a transition:fly={{ y: -40, duration: 400 }} href={url} style="--heightValue: {height};">
-	<img {src} {alt} />
+<a
+	transition:fly={{ y: -40, duration: 400 }}
+	href={url}
+	style="--heightValue: {height}; --widthValue: {width};"
+>
+	<img {src} {alt} on:load={() => (imgLoaded = true)} class:visible={imgLoaded} />
 	<div></div>
 </a>
 
@@ -28,7 +35,7 @@
 		box-shadow: 0 0.5em 0.8em rgba(0, 0, 0, 0.4);
 
 		max-width: 70vw;
-		width: auto;
+		width: var(--widthValue);
 		height: var(--heightValue);
 	}
 
@@ -67,13 +74,21 @@
 
 	img {
 		max-width: 70vw;
-		width: auto;
-		height: calc(var(--heightValue));
+		width: var(--widthValue);
+		height: var(--heightValue);
 
 		border-radius: var(--borderRadiusValue);
 
-		transition: border-radius var(--transitionDuration);
+		transition:
+			border-radius var(--transitionDuration),
+			opacity 0.6s;
 
 		object-fit: cover;
+
+		opacity: 0;
+	}
+
+	.visible {
+		opacity: 1;
 	}
 </style>

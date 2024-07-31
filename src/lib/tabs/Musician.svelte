@@ -20,6 +20,7 @@
 	alt="Fire garden live show"
 	url="https://www.instagram.com/byfiregarden/"
 	height="22em"
+	width="14em"
 />
 <LinkIcon
 	src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg"
