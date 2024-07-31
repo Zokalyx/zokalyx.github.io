@@ -33,6 +33,7 @@
 
 <style>
 	div {
+		display: -ms-grid;
 		display: grid;
 		box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.5);
 		border-radius: 50%;
@@ -56,6 +57,7 @@
 
 	img:hover {
 		-webkit-transform: rotate(-7deg);
+		-ms-transform: rotate(-7deg);
 		transform: rotate(-7deg);
 	}
 </style>

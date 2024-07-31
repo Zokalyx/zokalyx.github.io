@@ -290,7 +290,9 @@
 	/* TAB SELECTION BAR */
 
 	.title-container {
+		display: -ms-grid;
 		display: grid;
+
 		place-items: center;
 		overflow: hidden;
 		padding-bottom: 1em;
@@ -315,6 +317,14 @@
 		background-color: transparent;
 
 		-webkit-transform: translate3d(
+				var(--translateX-distance),
+				var(--translateY-distance),
+				var(--translateZ-distance)
+			)
+			rotateY(var(--rotateY-angle))
+			scale(calc(var(--scaleX-factor) + var(--hack-factor)), var(--scaleY-factor));
+
+		-ms-transform: translate3d(
 				var(--translateX-distance),
 				var(--translateY-distance),
 				var(--translateZ-distance)
@@ -361,6 +371,7 @@
 		place-items: center;
 		overflow-x: hidden;
 		-webkit-transform: translateY(var(--seam-fill-distance));
+		-ms-transform: translateY(var(--seam-fill-distance));
 		transform: translateY(var(--seam-fill-distance));
 		border-bottom-left-radius: var(--border-radius-value);
 		border-bottom-right-radius: var(--border-radius-value);
@@ -372,6 +383,7 @@
 		font-size: 2em;
 		color: black;
 		-webkit-transform: translateX(var(--translateX-distance));
+		-ms-transform: translateX(var(--translateX-distance));
 		transform: translateX(var(--translateX-distance));
 		font-family: var(--font-family-value), sans-serif;
 	}
@@ -393,6 +405,8 @@
 		width: var(--filet-size);
 		-webkit-transform: translate(var(--translateX-distance), var(--translateY-distance))
 			scaleX(var(--scaleX-factor));
+		-ms-transform: translate(var(--translateX-distance), var(--translateY-distance))
+			scaleX(var(--scaleX-factor));
 		transform: translate(var(--translateX-distance), var(--translateY-distance))
 			scaleX(var(--scaleX-factor));
 
@@ -408,6 +422,7 @@
 		--translateX-direction: -1;
 		--circle-position: circle at top left;
 		-webkit-transform-origin: right;
+		-ms-transform-origin: right;
 		transform-origin: right;
 	}
 
@@ -415,6 +430,7 @@
 		--translateX-direction: 1;
 		--circle-position: circle at top right;
 		-webkit-transform-origin: left;
+		-ms-transform-origin: left;
 		transform-origin: left;
 	}
 
@@ -428,11 +444,13 @@
 		color: black;
 
 		-webkit-transform: translateY(var(--translateY-distance));
+		-ms-transform: translateY(var(--translateY-distance));
 		transform: translateY(var(--translateY-distance));
 		box-shadow: 0 1.5em 1em rgba(30, 30, 30, var(--box-shadow-opacity));
 	}
 
 	.content {
+		display: -ms-flexbox;
 		display: flex;
 		align-items: center;
 		flex-wrap: wrap;

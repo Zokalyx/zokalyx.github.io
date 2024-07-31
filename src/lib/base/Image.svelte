@@ -49,6 +49,7 @@
 			transform var(--transitionDuration),
 			opacity 0.6s;
 
+		-o-object-fit: cover;
 		object-fit: cover;
 
 		opacity: 0;
@@ -56,6 +57,7 @@
 
 	div:hover {
 		-webkit-transform: scale(1.05);
+		-ms-transform: scale(1.05);
 		transform: scale(1.05);
 		border-radius: calc(var(--borderRadiusValue) / 2);
 	}

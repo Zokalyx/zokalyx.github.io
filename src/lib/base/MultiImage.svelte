@@ -44,6 +44,7 @@
 		margin-right: var(--sideMargin);
 
 		-webkit-transform: translateY(-0.75em);
+		-ms-transform: translateY(-0.25em);
 		transform: translateY(-0.25em);
 
 		width: var(--widthValue);
@@ -65,6 +66,7 @@
 		transform-origin: bottom;
 
 		-webkit-transform: rotate(var(--baseAngle));
+		-ms-transform: rotate(var(--baseAngle));
 		transform: rotate(var(--baseAngle));
 
 		transition:
@@ -83,6 +85,7 @@
 			border-radius var(--transitionDuration),
 			opacity 0.6s;
 
+		-o-object-fit: cover;
 		object-fit: cover;
 
 		opacity: 0;
@@ -94,6 +97,7 @@
 
 	.img-wrapper:hover {
 		-webkit-transform: rotate(calc(var(--baseAngle) + var(--hoverAngle))) scale(1.05);
+		-ms-transform: rotate(calc(var(--baseAngle) + var(--hoverAngle))) scale(1.05);
 		transform: rotate(calc(var(--baseAngle) + var(--hoverAngle))) scale(1.05);
 		border-radius: calc(var(--borderRadiusValue) / 2);
 	}

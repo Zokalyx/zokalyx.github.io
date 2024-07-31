@@ -37,6 +37,7 @@
 <style>
 	.widgets {
 		max-width: 90%;
+		display: -ms-flexbox;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
@@ -50,6 +51,7 @@
 		width: 20em;
 		background-color: #2c2c2c;
 		border-radius: 1em;
+		display: -ms-grid;
 		display: grid;
 		place-items: center;
 	}

@@ -25,6 +25,7 @@
 		--borderRadiusValue: 2em;
 		--transitionDuration: 200ms;
 
+		display: -ms-grid;
 		display: grid;
 
 		border-radius: var(--borderRadiusValue);
@@ -45,7 +46,9 @@
 
 	a:hover {
 		-webkit-transform: scale(1.05);
+		-ms-transform: scale(1.05);
 		transform: scale(1.05);
+
 		border-radius: calc(var(--borderRadiusValue) / 2);
 	}
 
@@ -83,6 +86,7 @@
 			border-radius var(--transitionDuration),
 			opacity 0.6s;
 
+		-o-object-fit: cover;
 		object-fit: cover;
 
 		opacity: 0;

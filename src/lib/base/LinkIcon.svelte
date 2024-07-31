@@ -66,6 +66,8 @@
 <style>
 	a,
 	.anchor-replacement {
+		display: -ms-flexbox;
+		display: -webkit-flex;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -75,10 +77,12 @@
 	}
 
 	a:hover img {
+		-webkit-filter: none;
 		filter: none;
 	}
 
 	.anchor-replacement:hover img {
+		-webkit-filter: none;
 		filter: none;
 	}
 
@@ -87,8 +91,10 @@
 			filter 300ms,
 			opacity 0.6s;
 		height: var(--heightValue);
+
 		-wekbit-filter: drop-shadow(0 0.25em 0.25em rgba(0, 0, 0, 0.4));
 		filter: drop-shadow(0 0.25em 0.25em rgba(0, 0, 0, 0.4));
+
 		opacity: 0;
 	}
 
