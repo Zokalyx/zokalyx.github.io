@@ -4,6 +4,7 @@
 	export let src: string;
 	export let alt: string;
 	export let height: string = '18em';
+	export let preloadOpacity = 0;
 
 	let imgLoaded = false;
 
@@ -23,7 +24,7 @@
 	<img
 		{src}
 		{alt}
-		style="--heightValue: {height}"
+		style="--heightValue: {height}; --preloadOpacity: {preloadOpacity};"
 		transition:rollFade={{ duration: 400 }}
 		on:load={() => (imgLoaded = true)}
 		class:visible={imgLoaded}
@@ -46,7 +47,7 @@
 		transition:
 			transform 200ms,
 			opacity 0.2s;
-		opacity: 0;
+		opacity: var(--preloadOpacity);
 	}
 
 	.visible {
