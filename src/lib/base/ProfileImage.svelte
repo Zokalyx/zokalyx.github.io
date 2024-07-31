@@ -41,6 +41,7 @@
 
 	img {
 		border-radius: 50%;
+		max-width: 70vw;
 		max-height: 70vw;
 		width: var(--heightValue);
 		height: var(--heightValue);
