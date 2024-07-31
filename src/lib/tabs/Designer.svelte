@@ -15,8 +15,8 @@
 
 <Paragraph>
 	I haven't really studied graphic design on its own. However, whenever I work on any project I make
-	sure it looks as good as possible, while making sure it's still functional and easy to understand.
-	A big part of my experience involves UI and logo design.
+	sure it looks as good as possible, while keeping it functional and easy to understand. A big part
+	of my experience involves UI and logo design.
 </Paragraph>
 <LinkImage src={unity} alt="Unity calculator" url="https://zokalyx.github.io/unity/" />
 <div style="width: 100%"></div>
