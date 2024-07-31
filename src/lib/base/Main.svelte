@@ -136,7 +136,7 @@
 			// This will fail unless the user has **tapped** on the screen
 			// (Swiping by itself is not enough).
 			// Should this be removed?
-			navigator.vibrate(30);
+			navigator.vibrate(40);
 		}
 	}
 </script>
@@ -176,17 +176,13 @@
 			<button
 				class="title-wrapper"
 				style="
-					--translateX-distance: calc({18 * relative}vw + {2 * relative}em);
-					--translateY-distance: {-1.0 * relativeAbs}em;
-					--translateZ-distance: {10 * relativeAbs}px;
-					--rotateY-angle: {-10 * relative}deg;
-					--scaleY-factor: {1.0 + 0.25 * relativeAbs};
-					--scaleX-factor: {1.0 - 0.6 * relativeAbs};
+					--relative: {relative};
+					--relativeAbs: {relativeAbs};
 					--hack-factor: {random};
 				"
 				on:click={() => {
 					select(absolute);
-					navigator.vibrate(30);
+					navigator.vibrate(40);
 				}}
 			>
 				<div
@@ -316,29 +312,33 @@
 		border: none;
 		background-color: transparent;
 
+		--translateX-distance: calc(18vw * var(--relative) + 2em * var(--relative));
+		--translateY-distance: calc(-1em * var(--relativeAbs));
+		--translateZ-distance: calc(10px * var(--relativeAbs));
+		--rotateY-angle: calc(-10deg * var(--relative));
+		--scaleY-factor: calc(1 + 0.25 * var(--relativeAbs));
+		--scaleX-factor: calc(1 - 0.6 * var(--relativeAbs) + var(--hack-factor));
+
 		-webkit-transform: translate3d(
 				var(--translateX-distance),
 				var(--translateY-distance),
 				var(--translateZ-distance)
 			)
-			rotateY(var(--rotateY-angle))
-			scale(calc(var(--scaleX-factor) + var(--hack-factor)), var(--scaleY-factor));
+			rotateY(var(--rotateY-angle)) scale(var(--scaleX-factor), var(--scaleY-factor));
 
 		-ms-transform: translate3d(
 				var(--translateX-distance),
 				var(--translateY-distance),
 				var(--translateZ-distance)
 			)
-			rotateY(var(--rotateY-angle))
-			scale(calc(var(--scaleX-factor) + var(--hack-factor)), var(--scaleY-factor));
+			rotateY(var(--rotateY-angle)) scale(var(--scaleX-factor), var(--scaleY-factor));
 
 		transform: translate3d(
 				var(--translateX-distance),
 				var(--translateY-distance),
 				var(--translateZ-distance)
 			)
-			rotateY(var(--rotateY-angle))
-			scale(calc(var(--scaleX-factor) + var(--hack-factor)), var(--scaleY-factor));
+			rotateY(var(--rotateY-angle)) scale(var(--scaleX-factor), var(--scaleY-factor));
 	}
 
 	.title {

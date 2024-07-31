@@ -20,11 +20,11 @@
 	}
 </script>
 
-<div>
+<div style="--heightValue: {height};">
 	<img
 		{src}
 		{alt}
-		style="--heightValue: {height}; --preloadOpacity: {preloadOpacity};"
+		style="--preloadOpacity: {preloadOpacity};"
 		transition:rollFade={{ duration: 400 }}
 		on:load={() => (imgLoaded = true)}
 		class:visible={imgLoaded}
@@ -42,7 +42,7 @@
 	img {
 		border-radius: 50%;
 		max-height: 70vw;
-		width: auto;
+		width: var(--heightValue);
 		height: var(--heightValue);
 
 		transition:
