@@ -26,7 +26,7 @@
 <LinkIcon
 	url=""
 	src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/636e0a69f118df70ad7828d4_icon_clyde_blurple_RGB.svg"
-	alt="LinkedIn icon"
+	alt="Discord icon"
 	text="zokalyx"
 	color="#5865F2"
 	width={linkWidth}
