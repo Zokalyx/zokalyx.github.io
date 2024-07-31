@@ -130,7 +130,7 @@
 			touchmoveX = null;
 			touchmoveY = null;
 
-			if (Math.abs(deltaY) > Math.abs(deltaX) || Math.abs(deltaX) < 150 || deltaX === 0) return;
+			if (Math.abs(deltaY) > Math.abs(deltaX) || Math.abs(deltaX) < 100 || deltaX === 0) return;
 
 			selectNext(-Math.sign(deltaX));
 			// This will fail unless the user has **tapped** on the screen
