@@ -36,6 +36,7 @@
 		width: 0.25em;
 		height: 0.25em;
 		transform: translate(var(--randomX), var(--randomY));
+		z-index: 1;
 	}
 
 	.sun {
@@ -48,7 +49,7 @@
 		height: 3em;
 		border-radius: 50%;
 		box-shadow: 0 0em 1em rgba(0, 0, 0, 0.502);
-		z-index: 2;
+		z-index: 3;
 
 		animation: 16s orbit linear infinite;
 
@@ -83,8 +84,18 @@
 	}
 
 	@keyframes earthPerspective {
+		49% {
+			z-index: 4;
+		}
+		50% {
+			z-index: 2;
+		}
+
+		99% {
+			z-index: 2;
+		}
 		100% {
-			z-index: 3;
+			z-index: 4;
 		}
 	}
 
@@ -93,6 +104,7 @@
 		--semi-minor-axis: 1.5em;
 		--base-angle: -15deg;
 
+		z-index: 4;
 		background-color: rgb(108, 158, 233);
 		width: 1em;
 		height: 1em;
