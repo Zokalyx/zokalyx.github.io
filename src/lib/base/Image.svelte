@@ -54,9 +54,13 @@
 		opacity: 0;
 	}
 
-	img:hover {
+	div:hover {
 		-webkit-transform: scale(1.05);
 		transform: scale(1.05);
+		border-radius: calc(var(--borderRadiusValue) / 2);
+	}
+
+	div:hover img {
 		border-radius: calc(var(--borderRadiusValue) / 2);
 	}
 

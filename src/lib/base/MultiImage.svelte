@@ -6,6 +6,7 @@
 	export let sideMargin: string = '1.5em';
 
 	export let images: { src: string; alt: string }[];
+	$: imagesLoaded = Array(images.length).fill(false) as boolean[];
 
 	// Angle between consecutive images.
 	export let baseAngle = 20;
@@ -14,6 +15,7 @@
 </script>
 
 <div
+	class="container"
 	transition:fly={{ y: -40, duration: 400 }}
 	style="
         --heightValue: {height};
@@ -23,16 +25,19 @@
     "
 >
 	{#each images as image, i}
-		<img
-			src={image.src}
-			alt={image.alt}
-			style="--baseAngle: {baseAngle * ((images.length - 1) / 2 - i)}deg"
-		/>
+		<div class="img-wrapper" style="--baseAngle: {baseAngle * ((images.length - 1) / 2 - i)}deg">
+			<img
+				src={image.src}
+				alt={image.alt}
+				on:load={() => (imagesLoaded[i] = true)}
+				class:visible={imagesLoaded[i]}
+			/>
+		</div>
 	{/each}
 </div>
 
 <style>
-	div {
+	.container {
 		display: grid;
 		place-items: center;
 		margin-left: var(--sideMargin);
@@ -44,36 +49,56 @@
 		width: var(--widthValue);
 	}
 
-	div > * {
+	.container > * {
 		grid-area: 1 / 1;
 	}
 
-	img {
+	.img-wrapper {
 		--transitionDuration: 200ms;
 		--borderRadiusValue: 2em;
 
-		max-width: 40vw;
-		width: auto;
-		height: var(--heightValue);
-
 		border-radius: var(--borderRadiusValue);
 
+		display: grid;
 		box-shadow: 0 0.5em 0.8em rgba(0, 0, 0, 0.4);
-		transition:
-			border-radius var(--transitionDuration),
-			transform var(--transitionDuration);
 
 		transform-origin: bottom;
 
 		-webkit-transform: rotate(var(--baseAngle));
 		transform: rotate(var(--baseAngle));
 
-		object-fit: cover;
+		transition:
+			border-radius var(--transitionDuration),
+			transform var(--transitionDuration);
 	}
 
-	img:hover {
+	img {
+		max-width: 40vw;
+		width: auto;
+		height: var(--heightValue);
+
+		border-radius: var(--borderRadiusValue);
+
+		transition:
+			border-radius var(--transitionDuration),
+			opacity 0.6s;
+
+		object-fit: cover;
+
+		opacity: 0;
+	}
+
+	.visible {
+		opacity: 1;
+	}
+
+	.img-wrapper:hover {
 		-webkit-transform: rotate(calc(var(--baseAngle) + var(--hoverAngle))) scale(1.05);
 		transform: rotate(calc(var(--baseAngle) + var(--hoverAngle))) scale(1.05);
+		border-radius: calc(var(--borderRadiusValue) / 2);
+	}
+
+	.img-wrapper:hover img {
 		border-radius: calc(var(--borderRadiusValue) / 2);
 	}
 </style>

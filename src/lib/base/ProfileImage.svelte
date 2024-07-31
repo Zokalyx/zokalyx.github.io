@@ -5,6 +5,8 @@
 	export let alt: string;
 	export let height: string = '18em';
 
+	let imgLoaded = false;
+
 	function rollFade(node: Element, { duration }: { duration: number }) {
 		return {
 			duration,
@@ -17,17 +19,38 @@
 	}
 </script>
 
-<img {src} {alt} style="--heightValue: {height}" transition:rollFade={{ duration: 400 }} />
+<div>
+	<img
+		{src}
+		{alt}
+		style="--heightValue: {height}"
+		transition:rollFade={{ duration: 400 }}
+		on:load={() => (imgLoaded = true)}
+		class:visible={imgLoaded}
+	/>
+</div>
 
 <style>
+	div {
+		display: grid;
+		box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.5);
+		border-radius: 50%;
+	}
+
 	img {
 		border-radius: 50%;
 		max-height: 70vw;
 		width: auto;
 		height: var(--heightValue);
-		box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.5);
 
-		transition: transform 200ms;
+		transition:
+			transform 200ms,
+			opacity 0.2s;
+		opacity: 0;
+	}
+
+	.visible {
+		opacity: 1;
 	}
 
 	img:hover {
