@@ -164,6 +164,41 @@
 			event.deltaY > 0 ? selectNext(1) : selectNext(-1);
 		}}
 	>
+		{#each visibleTitles as title, i}
+			<!-- Relative: The current has an index of 0.
+			 	 Going left subtracts and going right increasese this index.
+				 Can be fractional. -->
+			{@const relative = i - Math.floor(visibleTitleCount / 2) - tabSwitchProgress}
+			{@const relativeAbs = Math.abs(relative)}
+			<!-- Absolute: This is the actual index of the section.
+			 	 Is always an integer. -->
+			{@const absolute = mod(i - Math.floor(visibleTitleCount / 2) + roundedSelection, tabs.length)}
+			<button
+				class="title-wrapper"
+				style="
+					--relative: {relative};
+					--relativeAbs: {relativeAbs};
+					--hack-factor: {random};
+				"
+				on:click={() => {
+					select(absolute);
+					navigator.vibrate(40);
+				}}
+			>
+				<div
+					class="title"
+					style="
+						--opacity-value: {1.8 - relativeAbs};
+						--gradient-angle: {relative < 0 ? 90 : 270}deg;
+						--gradient-black-percentage: {-75 + 50 * relativeAbs}%;
+						--gradient-white-percentage: {50 + 50 * relativeAbs}%;
+					"
+				>
+					{title}
+				</div>
+			</button>
+		{/each}
+
 		<div
 			class="color current-title-container"
 			style="
