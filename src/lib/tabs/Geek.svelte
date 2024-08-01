@@ -11,7 +11,7 @@
 </Paragraph>
 <Paragraph>
 	A big "side passion" of mine is math and physics. I've studied those subjects as an Engineering
-	major, but only when they're directly appliable to my area of expertise. Over the years, I've
+	major, but only when they're directly applicable to my area of expertise. Over the years, I've
 	studied a few other subjects on my own, and I plan to steadily continue that journey. I'm really
 	curious about the universe and the fancy mathematical tools some people have come up with to
 	understand it.
