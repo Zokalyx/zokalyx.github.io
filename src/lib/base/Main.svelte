@@ -245,6 +245,10 @@
 	</div>
 </div>
 
+<svelte:head>
+	<title>Francisco Russo - {currTitle}</title>
+</svelte:head>
+
 <style>
 	/* MAIN */
 
