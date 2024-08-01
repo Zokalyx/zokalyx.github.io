@@ -11,5 +11,5 @@
 	and information about me on this site. Hope you like it!<br /><br />I'm a guy with a diverse set
 	of skills and interests and a generalist at heart. I'm mostly interested in technical and artistic
 	areas, with varying levels of experience in each of them.<br /><br />Click on the different tabs
-	or swipe to learn more!
+	or swipe to learn more.
 </Paragraph>
