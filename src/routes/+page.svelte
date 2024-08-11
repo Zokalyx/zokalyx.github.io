@@ -11,19 +11,28 @@
 
 	const tabs = [
 		{
-			title: 'Profile',
+			title: {
+				EN: 'Profile',
+				ES: 'Perfil'
+			},
 			font: 'Lora',
 			color: '#d0d0d0',
 			content: Profile
 		},
 		{
-			title: 'Engineer',
+			title: {
+				EN: 'Engineer',
+				ES: 'Ingeniero'
+			},
 			font: 'Fjalla One',
 			color: '#738cff',
 			content: Engineer
 		},
 		{
-			title: 'Developer',
+			title: {
+				EN: 'Developer',
+				ES: 'Desarrollador'
+			},
 			font: 'Nanum Gothic Coding',
 			color: '#fff176',
 			content: Developer,
@@ -31,31 +40,46 @@
 			colGap: '4em'
 		},
 		{
-			title: 'Designer',
+			title: {
+				EN: 'Designer',
+				ES: 'Diseñador'
+			},
 			font: 'Josefin Sans',
 			color: '#ff6161',
 			content: Designer
 		},
 		{
-			title: 'Artist',
+			title: {
+				EN: 'Artist',
+				ES: 'Artista'
+			},
 			font: 'Comfortaa',
 			color: '#76e5ff',
 			content: Artist
 		},
 		{
-			title: 'Musician',
+			title: {
+				EN: 'Musician',
+				ES: 'Músico'
+			},
 			font: 'Pacifico',
 			color: '#76ffa0',
 			content: Musician
 		},
 		{
-			title: 'Geek',
+			title: {
+				EN: 'Geek',
+				ES: 'Geek'
+			},
 			font: 'Press Start 2P',
 			color: '#ff86ea',
 			content: Geek
 		},
 		{
-			title: 'Contact',
+			title: {
+				EN: 'Contact',
+				ES: 'Contacto'
+			},
 			font: 'Nunito Sans',
 			color: '#d0d0d0',
 			content: Contact,

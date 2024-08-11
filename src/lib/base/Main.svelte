@@ -21,7 +21,9 @@
 
 	// List of tabs/sections to be cycled through
 	export let tabs: {
-		title: string;
+		title: {
+			[key: string]: string;
+		};
 		font: string;
 		color: string;
 		content: ComponentType<SvelteComponent<{}>>;
@@ -49,11 +51,11 @@
 	$: strongSelection = $tabSelectionStrength > 0.5;
 
 	// Selected title and neighboring ones
-	$: prevPrevTitle = tabs[mod(roundedSelection - 2, tabs.length)].title;
-	$: prevTitle = tabs[mod(roundedSelection - 1, tabs.length)].title;
-	$: currTitle = tabs[mod(roundedSelection, tabs.length)].title;
-	$: nextTitle = tabs[mod(roundedSelection + 1, tabs.length)].title;
-	$: nextNextTitle = tabs[mod(roundedSelection + 2, tabs.length)].title;
+	$: prevPrevTitle = tabs[mod(roundedSelection - 2, tabs.length)].title[language];
+	$: prevTitle = tabs[mod(roundedSelection - 1, tabs.length)].title[language];
+	$: currTitle = tabs[mod(roundedSelection, tabs.length)].title[language];
+	$: nextTitle = tabs[mod(roundedSelection + 1, tabs.length)].title[language];
+	$: nextNextTitle = tabs[mod(roundedSelection + 2, tabs.length)].title[language];
 
 	// Must be odd.
 	const visibleTitleCount = 5;
@@ -218,6 +220,7 @@
 			class="color current-title-container"
 			style="
 				--border-radius-value: {-2 * ($tabSelectionStrength - 0.5)}em;
+				--current-title-size: {currTitle === 'Desarrollador' ? 1.6 : 2}em;
 			"
 		>
 			<h2
@@ -402,7 +405,7 @@
 	.current-title {
 		margin: 0;
 		text-align: center;
-		font-size: 2em;
+		font-size: var(--current-title-size);
 		color: black;
 		-webkit-transform: translateX(var(--translateX-distance));
 		-ms-transform: translateX(var(--translateX-distance));
