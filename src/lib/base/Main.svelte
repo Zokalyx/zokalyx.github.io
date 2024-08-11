@@ -5,6 +5,19 @@
 	import { tweened } from 'svelte/motion';
 	import { cubicInOut } from 'svelte/easing';
 	import { slide } from 'svelte/transition';
+	import Language from './Language.svelte';
+
+	let languages = [
+		{
+			name: 'EN',
+			flag: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/1920px-Flag_of_the_United_Kingdom_%281-2%29.svg.png'
+		},
+		{
+			name: 'ES',
+			flag: 'https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/1280px-Flag_of_Spain.svg.png'
+		}
+	];
+	let language = 'EN';
 
 	// List of tabs/sections to be cycled through
 	export let tabs: {
@@ -153,7 +166,9 @@
 	"
 >
 	<div class="name-container">
+		<div style="width: 3em;"></div>
 		<h1 class="name">Francisco Russo</h1>
+		<Language {languages} bind:language />
 	</div>
 
 	<div
@@ -238,7 +253,7 @@
 		{#each tabs as section, i}
 			{#if i === tabSelection}
 				<div class="content" transition:slide={{ axis: 'y', duration: 300 }}>
-					<svelte:component this={section.content} />
+					<svelte:component this={section.content} {language} />
 				</div>
 			{/if}
 		{/each}
@@ -270,8 +285,11 @@
 
 	.name-container {
 		margin: 0;
-		padding: 0.5em 0 0 0;
+		padding: 0.5em 1em 0 1em;
 		background-color: rgb(0, 0, 0);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
 
 	.name {

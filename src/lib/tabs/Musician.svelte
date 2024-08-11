@@ -6,14 +6,25 @@
 	import LinkImage from '../base/LinkImage.svelte';
 	import LinkIcon from '../base/LinkIcon.svelte';
 	import AudioPlayer from '../base/AudioPlayer.svelte';
+
+	export let language;
 </script>
 
 <Paragraph>
-	Apart from being a huge music fan, I consider myself a musician. The guitar has been my main
-	instrument for over a decade and I have experience composing and producing music. You can hear
-	some of it on my Youtube channel.
-	<br /><br />I was also part of a band named Fire Garden, where I got to play song covers live. Fun
-	times!
+	{#if language === 'EN'}
+		Apart from being a huge music fan, I consider myself a musician. The guitar has been my main
+		instrument for over a decade and I have experience composing and producing music. You can hear
+		some of it on my Youtube channel.
+		<br /><br />I was also part of a band named Fire Garden, where I got to play song covers live.
+		Fun times!
+	{:else}
+		Aparte de ser un gran amante de la música, me considero un músico. Tuve a la guitarra como mi
+		instrumento principal por más de una década y tengo experiencia componiendo y produciendo
+		música. En mi canal de Youtube tengo subidas algunas canciones.
+		<br /><br />
+		También fui parte de una banda llamada Fire Garden, donde pude tocar varios covers en vivo. Lindos
+		momentos!
+	{/if}
 </Paragraph>
 <LinkImage
 	src={show}

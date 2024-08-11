@@ -11,12 +11,20 @@
 	import MultiImage from '../base/MultiImage.svelte';
 
 	const imageHeight = '15em';
+
+	export let language;
 </script>
 
 <Paragraph>
-	I haven't really studied graphic design on its own. However, whenever I work on any project I make
-	sure it looks as good as possible, while keeping it functional and easy to understand. A big part
-	of my experience involves UI and logo design.
+	{#if language === 'EN'}
+		I haven't really studied graphic design on its own. However, whenever I work on any project I
+		make sure it looks as good as possible, while keeping it functional and easy to understand. A
+		big part of my experience involves UI and logo design.
+	{:else}
+		Realmente, nunca estudié diseño gráfico por su propia cuenta. Aún así, siempre que trabajo en
+		algún proyecto me aseguro de que se vea lo mejor posible, manteniendo su funcionalidad y
+		facilidad de uso. Una gran parte de mi experiencia tiene que ver con diseño de UIs y logos.
+	{/if}
 </Paragraph>
 <LinkImage src={unity} alt="Unity calculator" url="https://zokalyx.github.io/unity/" width="32em" />
 <div style="width: 100%"></div>

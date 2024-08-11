@@ -8,18 +8,31 @@
 
 	import Paragraph from '../base/Paragraph.svelte';
 	import LinkImage from '../base/LinkImage.svelte';
+
+	export let language;
 </script>
 
 <Paragraph>
-	I'm an Electronics Engineering student at the University of Buenos Aires and I'm expecting to
-	graduate by the end of 2025.
+	{#if language == 'EN'}
+		I'm an Electronics Engineering student at the University of Buenos Aires and I'm expecting to
+		graduate by the end of 2025.
+	{:else}
+		Estudio Ingeniería Electrónica en la Universidad de Buenos Aires y espero recibirme para fines
+		de 2025.
+	{/if}
 </Paragraph>
 <LinkImage url="https://www.fi.uba.ar" src={fiuba} alt="Facultad de Ingeniería" width="36em" />
 <div style="width: 100%;"></div>
 <Paragraph>
-	I've learned many cool things during my studies! I have a solid understanding of signal analysis,
-	digital and analog circuits, electromagnetic theory, the relationship between hardware and
-	software, computer assisted design, and more.
+	{#if language == 'EN'}
+		I've learned many cool things during my studies! I have a solid understanding of signal
+		analysis, digital and analog circuits, electromagnetic theory, the relationship between hardware
+		and software, computer assisted design, and more.
+	{:else}
+		Aprendí muchas cosas interesantes durante mis estudios! Comprendo de manera bastante sólida el
+		análisis de señales, circuitos analógicos y digitales, la teoría electromagnética, la relación
+		entre hardware y software, diseño asistido por computadora y más.
+	{/if}
 </Paragraph>
 <div style="width: 100%;"></div>
 <div class="widgets" transition:fly={{ y: -40, duration: 400 }}>

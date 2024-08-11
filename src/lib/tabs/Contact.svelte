@@ -2,10 +2,18 @@
 	import LinkIcon from '../base/LinkIcon.svelte';
 	import Paragraph from '../base/Paragraph.svelte';
 
+	export let language;
+
 	const linkWidth = '15em';
 </script>
 
-<Paragraph>Feel free to reach out via LinkedIn, email, or Discord.</Paragraph>
+<Paragraph
+	>{#if language === 'EN'}
+		Feel free to reach out via LinkedIn, email, or Discord.
+	{:else}
+		Contactame a través de LinkedIn, email o Discord.
+	{/if}
+</Paragraph>
 <div style="width: 100%;"></div>
 <LinkIcon
 	url="https://www.linkedin.com/in/fran-russo"
