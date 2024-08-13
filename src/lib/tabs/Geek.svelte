@@ -15,7 +15,7 @@
 		Crecí con computadoras y entiendo muy bien cómo funcionan. Por ejemplo, los juegos me enseñaron
 		mucho, de manera indirecta, sobre hardware. Necesité usar muchos programas de oficina como
 		PowerPoint, Word y Excel para mis tareas escolares, y mis ambiciones artísticas me obligaron a
-		aprender edición de audio, imagen y video. Aún así, tengo mucho para aprender y mejorar.
+		aprender edición de audio, imagen y video. Aun así, tengo mucho para aprender y mejorar.
 	{/if}
 </Paragraph>
 <Paragraph>

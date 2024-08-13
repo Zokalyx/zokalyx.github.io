@@ -23,6 +23,6 @@
 		me interesan tanto áreas artísticas y técnicas, teniendo distintos niveles de experiencia en cada
 		una.
 		<br /><br />
-		Clickéa en las distinas pestañas o deslizá para conocer más.
+		Clickeá en las distintas pestañas o deslizá para conocer más.
 	{/if}
 </Paragraph>
