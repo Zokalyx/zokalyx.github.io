@@ -10,7 +10,7 @@
 <ProfileImage src={profilePhoto} alt="profile" height="20em" preloadOpacity={1} />
 <Paragraph>
 	{#if language === 'EN'}
-		Hi! I'm Francisco, a 22-year-old from Buenos Aires, Argentina. You will find many of my projects
+		Hi! I'm Francisco, a 23-year-old from Buenos Aires, Argentina. You will find many of my projects
 		and information about me on this site. Hope you like it!<br /><br />I'm a guy with a diverse set
 		of skills and interests and a generalist at heart. I'm mostly interested in technical and
 		artistic areas, with varying levels of experience in each of them.<br /><br />Click on the
