@@ -15,11 +15,11 @@ import{y as Lt,h as Wt,z as Vt,s as ae,n as ve,c as xe,A as me,e as er,B as ar,r
 		me interesan tanto áreas artísticas y técnicas, teniendo distintos niveles de experiencia en cada
 		una.
 		`),r=k(l,"BR",{}),s=k(l,"BR",{}),u=J(l,`
-		Clickeá en las distintas pestañas o deslizá para conocer más.`)},m(l,o){g(l,e,o),g(l,t,o),g(l,a,o),g(l,n,o),g(l,r,o),g(l,s,o),g(l,u,o)},d(l){l&&(f(e),f(t),f(a),f(n),f(r),f(s),f(u))}}}function Lr(i){let e,t,a,n,r,s,u;return{c(){e=G(`Hi! I'm Francisco, a 22-year-old from Buenos Aires, Argentina. You will find many of my projects
+		Clickeá en las distintas pestañas o deslizá para conocer más.`)},m(l,o){g(l,e,o),g(l,t,o),g(l,a,o),g(l,n,o),g(l,r,o),g(l,s,o),g(l,u,o)},d(l){l&&(f(e),f(t),f(a),f(n),f(r),f(s),f(u))}}}function Lr(i){let e,t,a,n,r,s,u;return{c(){e=G(`Hi! I'm Francisco, a 23-year-old from Buenos Aires, Argentina. You will find many of my projects
 		and information about me on this site. Hope you like it!`),t=T("br"),a=T("br"),n=G(`I'm a guy with a diverse set
 		of skills and interests and a generalist at heart. I'm mostly interested in technical and
 		artistic areas, with varying levels of experience in each of them.`),r=T("br"),s=T("br"),u=G(`Click on the
-		different tabs or swipe to learn more.`)},l(l){e=J(l,`Hi! I'm Francisco, a 22-year-old from Buenos Aires, Argentina. You will find many of my projects
+		different tabs or swipe to learn more.`)},l(l){e=J(l,`Hi! I'm Francisco, a 23-year-old from Buenos Aires, Argentina. You will find many of my projects
 		and information about me on this site. Hope you like it!`),t=k(l,"BR",{}),a=k(l,"BR",{}),n=J(l,`I'm a guy with a diverse set
 		of skills and interests and a generalist at heart. I'm mostly interested in technical and
 		artistic areas, with varying levels of experience in each of them.`),r=k(l,"BR",{}),s=k(l,"BR",{}),u=J(l,`Click on the
